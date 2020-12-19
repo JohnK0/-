@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,18 +16,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZYz-L1-ZYA">
-                                <rect key="frame" x="356" y="57" width="21" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle"/>
-                                    <imageReference key="image" image="gearshape" catalog="system" renderingMode="original"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iA-pa-TDo" userLabel="submit">
+                                <rect key="frame" x="107" y="425.5" width="200" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="P5X-Nt-6se"/>
+                                    <constraint firstAttribute="width" constant="200" id="Rn9-Je-RWb"/>
+                                </constraints>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="submittedHabit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YR7-md-CMa"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-xe-kr7">
+                                <rect key="frame" x="70" y="256" width="274" height="136"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Habit Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-OK-W16" userLabel="habitName">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="edittedHabitName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="T1m-EI-LoO"/>
+                                        </connections>
+                                    </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rAA-zy-fGE" userLabel="habitMeasurementType">
+                                        <rect key="frame" x="0.0" y="54" width="274" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="doB-nh-TKc"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="31A-ou-Se8" userLabel="habitTrajectoryType">
+                                        <rect key="frame" x="0.0" y="105" width="274" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="h7X-U3-vhZ"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="31A-ou-Se8" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="2Jf-37-vnK"/>
+                                    <constraint firstItem="c6L-OK-W16" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="7Vo-da-dez"/>
+                                    <constraint firstAttribute="trailing" secondItem="31A-ou-Se8" secondAttribute="trailing" id="N4b-DJ-mgd"/>
+                                    <constraint firstItem="rAA-zy-fGE" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="i95-NL-4MX"/>
+                                    <constraint firstAttribute="trailing" secondItem="rAA-zy-fGE" secondAttribute="trailing" id="nfk-Fu-Swx"/>
+                                    <constraint firstAttribute="trailing" secondItem="c6L-OK-W16" secondAttribute="trailing" id="zKH-hu-FPG"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3iA-pa-TDo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1uK-tD-aRr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zp2-xe-kr7" secondAttribute="trailing" constant="70" id="Ra7-Og-uui"/>
+                            <constraint firstItem="Zp2-xe-kr7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="gGW-Ma-9N3"/>
+                            <constraint firstItem="3iA-pa-TDo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hgC-we-7Ie"/>
+                            <constraint firstItem="3iA-pa-TDo" firstAttribute="top" secondItem="Zp2-xe-kr7" secondAttribute="bottom" constant="32.5" id="s4A-dA-52j"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="habitMeasurementTypes" destination="rAA-zy-fGE" id="ezX-Jm-KmJ"/>
+                        <outlet property="habitNameTextBox" destination="c6L-OK-W16" id="DVA-FU-oL6"/>
+                        <outlet property="habitTrajectoryTypes" destination="31A-ou-Se8" id="AcH-l2-2uC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,9 +94,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
