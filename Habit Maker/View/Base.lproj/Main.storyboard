@@ -30,8 +30,8 @@
                                     <action selector="submittedHabit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YR7-md-CMa"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-xe-kr7">
-                                <rect key="frame" x="70" y="256" width="274" height="136"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-xe-kr7">
+                                <rect key="frame" x="70" y="257" width="274" height="136"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Habit Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-OK-W16" userLabel="habitName">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="34"/>
@@ -44,8 +44,9 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rAA-zy-fGE" userLabel="habitMeasurementType">
                                         <rect key="frame" x="0.0" y="54" width="274" height="32"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="Hour"/>
+                                            <segment title="Day"/>
+                                            <segment title="Week"/>
                                         </segments>
                                         <connections>
                                             <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="doB-nh-TKc"/>
@@ -54,8 +55,8 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="31A-ou-Se8" userLabel="habitTrajectoryType">
                                         <rect key="frame" x="0.0" y="105" width="274" height="32"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="Decreasing"/>
+                                            <segment title="Increasing"/>
                                         </segments>
                                         <connections>
                                             <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="h7X-U3-vhZ"/>
