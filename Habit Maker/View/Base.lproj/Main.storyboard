@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,71 +16,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iA-pa-TDo" userLabel="submit">
-                                <rect key="frame" x="107" y="425.5" width="200" height="45"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="P5X-Nt-6se"/>
-                                    <constraint firstAttribute="width" constant="200" id="Rn9-Je-RWb"/>
-                                </constraints>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="submittedHabit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YR7-md-CMa"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-xe-kr7">
-                                <rect key="frame" x="70" y="257" width="274" height="136"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dk9-nU-AaG">
+                                <rect key="frame" x="67" y="315.66666666666669" width="280" height="265.00000000000006"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Habit Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-OK-W16" userLabel="habitName">
-                                        <rect key="frame" x="0.0" y="0.0" width="274" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iA-pa-TDo" userLabel="submit">
+                                        <rect key="frame" x="40" y="219.99999999999994" width="200" height="45"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="P5X-Nt-6se"/>
+                                            <constraint firstAttribute="width" constant="200" id="Rn9-Je-RWb"/>
+                                        </constraints>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
                                         <connections>
-                                            <action selector="edittedHabitName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="T1m-EI-LoO"/>
+                                            <action selector="submittedHabit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YR7-md-CMa"/>
                                         </connections>
-                                    </textField>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rAA-zy-fGE" userLabel="habitMeasurementType">
-                                        <rect key="frame" x="0.0" y="54" width="274" height="32"/>
-                                        <segments>
-                                            <segment title="Hour"/>
-                                            <segment title="Day"/>
-                                            <segment title="Week"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="doB-nh-TKc"/>
-                                        </connections>
-                                    </segmentedControl>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="31A-ou-Se8" userLabel="habitTrajectoryType">
-                                        <rect key="frame" x="0.0" y="105" width="274" height="32"/>
-                                        <segments>
-                                            <segment title="Decreasing"/>
-                                            <segment title="Increasing"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="h7X-U3-vhZ"/>
-                                        </connections>
-                                    </segmentedControl>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-xe-kr7">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="205"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Habit Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-OK-W16" userLabel="habitName">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="edittedHabitName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="T1m-EI-LoO"/>
+                                                </connections>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rAA-zy-fGE" userLabel="habitMeasurementType">
+                                                <rect key="frame" x="0.0" y="56" width="280" height="37.333333333333343"/>
+                                                <segments>
+                                                    <segment title="Hour"/>
+                                                    <segment title="Day"/>
+                                                    <segment title="Week"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="doB-nh-TKc"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="31A-ou-Se8" userLabel="habitTrajectoryType">
+                                                <rect key="frame" x="0.0" y="112.3333333333333" width="280" height="37.333333333333329"/>
+                                                <segments>
+                                                    <segment title="Decreasing"/>
+                                                    <segment title="Increasing"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="edittedHabitTypes:" destination="BYZ-38-t0r" eventType="valueChanged" id="h7X-U3-vhZ"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-2X-9dI">
+                                                <rect key="frame" x="0.0" y="168.66666666666663" width="280" height="36.333333333333343"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crh-uY-ra4">
+                                                        <rect key="frame" x="25" y="0.0" width="136" height="36.333333333333336"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="L7U-dC-h1M">
+                                                        <rect key="frame" x="161" y="0.0" width="94" height="36.333333333333336"/>
+                                                    </stepper>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="crh-uY-ra4" secondAttribute="bottom" id="1Ys-bl-1hw"/>
+                                                    <constraint firstItem="crh-uY-ra4" firstAttribute="top" secondItem="Paw-2X-9dI" secondAttribute="top" id="KwM-Mx-LkV"/>
+                                                    <constraint firstAttribute="bottom" secondItem="L7U-dC-h1M" secondAttribute="bottom" id="Mwt-6f-9YT"/>
+                                                    <constraint firstItem="L7U-dC-h1M" firstAttribute="leading" secondItem="crh-uY-ra4" secondAttribute="trailing" id="VFu-Rr-f0i"/>
+                                                    <constraint firstAttribute="trailing" secondItem="L7U-dC-h1M" secondAttribute="trailing" constant="25" id="bMu-Ju-bMX"/>
+                                                    <constraint firstItem="L7U-dC-h1M" firstAttribute="leading" secondItem="crh-uY-ra4" secondAttribute="trailing" id="cW9-dX-xId"/>
+                                                    <constraint firstItem="L7U-dC-h1M" firstAttribute="top" secondItem="Paw-2X-9dI" secondAttribute="top" id="ho9-aX-gHI"/>
+                                                    <constraint firstItem="crh-uY-ra4" firstAttribute="leading" secondItem="Paw-2X-9dI" secondAttribute="leading" constant="25" id="zI5-Lw-6WB"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="31A-ou-Se8" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="2Jf-37-vnK"/>
+                                            <constraint firstItem="c6L-OK-W16" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="7Vo-da-dez"/>
+                                            <constraint firstItem="Paw-2X-9dI" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="BTZ-33-Ny8"/>
+                                            <constraint firstAttribute="trailing" secondItem="Paw-2X-9dI" secondAttribute="trailing" id="Foo-1a-kMz"/>
+                                            <constraint firstAttribute="trailing" secondItem="31A-ou-Se8" secondAttribute="trailing" id="N4b-DJ-mgd"/>
+                                            <constraint firstItem="rAA-zy-fGE" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="i95-NL-4MX"/>
+                                            <constraint firstAttribute="trailing" secondItem="rAA-zy-fGE" secondAttribute="trailing" id="nfk-Fu-Swx"/>
+                                            <constraint firstAttribute="trailing" secondItem="c6L-OK-W16" secondAttribute="trailing" id="zKH-hu-FPG"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="31A-ou-Se8" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="2Jf-37-vnK"/>
-                                    <constraint firstItem="c6L-OK-W16" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="7Vo-da-dez"/>
-                                    <constraint firstAttribute="trailing" secondItem="31A-ou-Se8" secondAttribute="trailing" id="N4b-DJ-mgd"/>
-                                    <constraint firstItem="rAA-zy-fGE" firstAttribute="leading" secondItem="Zp2-xe-kr7" secondAttribute="leading" id="i95-NL-4MX"/>
-                                    <constraint firstAttribute="trailing" secondItem="rAA-zy-fGE" secondAttribute="trailing" id="nfk-Fu-Swx"/>
-                                    <constraint firstAttribute="trailing" secondItem="c6L-OK-W16" secondAttribute="trailing" id="zKH-hu-FPG"/>
+                                    <constraint firstAttribute="trailing" secondItem="3iA-pa-TDo" secondAttribute="trailing" constant="40" id="62K-kZ-dTp"/>
+                                    <constraint firstItem="3iA-pa-TDo" firstAttribute="top" secondItem="Zp2-xe-kr7" secondAttribute="bottom" constant="15" id="IYu-9F-321"/>
+                                    <constraint firstItem="3iA-pa-TDo" firstAttribute="leading" secondItem="Dk9-nU-AaG" secondAttribute="leading" constant="40" id="LYF-gw-5n4"/>
+                                    <constraint firstAttribute="bottom" secondItem="3iA-pa-TDo" secondAttribute="bottom" id="QE1-cX-Mls"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zp2-xe-kr7" secondAttribute="trailing" id="gL3-ae-pAs"/>
+                                    <constraint firstItem="Zp2-xe-kr7" firstAttribute="top" secondItem="Dk9-nU-AaG" secondAttribute="top" id="gV4-zd-FTJ"/>
+                                    <constraint firstItem="Zp2-xe-kr7" firstAttribute="leading" secondItem="Dk9-nU-AaG" secondAttribute="leading" id="gao-J9-xLb"/>
+                                    <constraint firstItem="3iA-pa-TDo" firstAttribute="centerY" secondItem="Dk9-nU-AaG" secondAttribute="centerY" constant="110" id="nej-Pa-h83"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3iA-pa-TDo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1uK-tD-aRr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zp2-xe-kr7" secondAttribute="trailing" constant="70" id="Ra7-Og-uui"/>
-                            <constraint firstItem="Zp2-xe-kr7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="gGW-Ma-9N3"/>
-                            <constraint firstItem="3iA-pa-TDo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hgC-we-7Ie"/>
-                            <constraint firstItem="3iA-pa-TDo" firstAttribute="top" secondItem="Zp2-xe-kr7" secondAttribute="bottom" constant="32.5" id="s4A-dA-52j"/>
+                            <constraint firstItem="Dk9-nU-AaG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cww-si-cuC"/>
+                            <constraint firstItem="Dk9-nU-AaG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lAC-E6-Rqc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -92,6 +132,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="US8-8u-veo">
+            <objects>
+                <viewController id="lxy-AQ-tZA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bmV-f8-PNf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DHm-1x-fV5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCc-Lz-inP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784" y="91"/>
         </scene>
     </scenes>
     <resources>
