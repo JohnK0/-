@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5214D2F52596F3B1007999D0 /* TrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214D2F42596F3B1007999D0 /* TrackerViewController.swift */; };
 		525BB96C2587228700F8A23E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BB96B2587228700F8A23E /* AppDelegate.swift */; };
 		525BB96E2587228700F8A23E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BB96D2587228700F8A23E /* SceneDelegate.swift */; };
 		525BB9702587228700F8A23E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525BB96F2587228700F8A23E /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5214D2F42596F3B1007999D0 /* TrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerViewController.swift; sourceTree = "<group>"; };
 		525BB9682587228700F8A23E /* Habit Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		525BB96B2587228700F8A23E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		525BB96D2587228700F8A23E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				525BB96F2587228700F8A23E /* ViewController.swift */,
+				5214D2F42596F3B1007999D0 /* TrackerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				525BB9702587228700F8A23E /* ViewController.swift in Sources */,
 				52C875DB2589CDC1009AFB94 /* Habit.swift in Sources */,
 				525BB96C2587228700F8A23E /* AppDelegate.swift in Sources */,
+				5214D2F52596F3B1007999D0 /* TrackerViewController.swift in Sources */,
 				525BB96E2587228700F8A23E /* SceneDelegate.swift in Sources */,
 				52C875D82589CCA5009AFB94 /* HabitBrain.swift in Sources */,
 			);
